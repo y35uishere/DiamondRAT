@@ -16,9 +16,9 @@ namespace common
                 Array.Copy(temp, 0, hash, 15, 16);
                 AES.Key = hash;
                 AES.Mode = System.Security.Cryptography.CipherMode.ECB;
-                System.Security.Cryptography.ICryptoTransform DESEncrypter = AES.CreateEncryptor();
+                System.Security.Cryptography.ICryptoTransform AESEncrypter = AES.CreateEncryptor();
                 byte[] Buffer = System.Text.ASCIIEncoding.ASCII.GetBytes(input);
-                return DESEncrypter.TransformFinalBlock(Buffer, 0, Buffer.Length);
+                return AESEncrypter.TransformFinalBlock(Buffer, 0, Buffer.Length);
             }
             catch (Exception ex)
             {
@@ -39,8 +39,8 @@ namespace common
                 Array.Copy(temp, 0, hash, 15, 16);
                 AES.Key = hash;
                 AES.Mode = System.Security.Cryptography.CipherMode.ECB;
-                System.Security.Cryptography.ICryptoTransform DESDecrypter = AES.CreateDecryptor();
-                decrypted = System.Text.ASCIIEncoding.ASCII.GetString(DESDecrypter.TransformFinalBlock(input, 0, input.Length));
+                System.Security.Cryptography.ICryptoTransform AESDecrypter = AES.CreateDecryptor();
+                decrypted = System.Text.ASCIIEncoding.ASCII.GetString(AESDecrypter.TransformFinalBlock(input, 0, input.Length));
                 return decrypted;
             }
             catch (Exception ex)
