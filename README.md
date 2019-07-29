@@ -5,8 +5,8 @@ Remote Administration Tool for Windows / Windows远程管理工具
 
 - 支持TCP和SSL
 - 支持AES加密
-- 支持查看详细的系统信息
-- 支持查看已安装软件
+- 支持查看系统详细信息
+- 支持查看已安装程序
 - 支持文件管理
 - 支持shell
 - 支持远程桌面
