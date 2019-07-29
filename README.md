@@ -1,5 +1,5 @@
 # DiamondRAT
-Remote Administration Tool for Windows / 远程管理工具
+Remote Administration Tool for Windows / Windows远程管理工具
 
 ## features
 
